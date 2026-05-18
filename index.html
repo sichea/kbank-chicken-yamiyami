@@ -85,7 +85,7 @@
 
             <div class="tab-container">
                 <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="tab1"><i class="fas fa-download"></i> 1. 준비물</button>
+                    <button class="tab-btn active" data-tab="tab1"><i class="fas fa-download"></i> 1. 준비물 다운로드</button>
                     <button class="tab-btn" data-tab="tab2"><i class="fas fa-tools"></i> 2. 개발자 모드</button>
                     <button class="tab-btn" data-tab="tab3"><i class="fas fa-cloud-upload-alt"></i> 3. 우회 설치</button>
                     <button class="tab-btn" data-tab="tab4"><i class="fas fa-play-circle"></i> 4. 매크로 가동</button>
@@ -94,20 +94,40 @@
                 <div class="tab-content active" id="tab1">
                     <div class="info-layout">
                         <div class="info-text">
-                            <h3>닭 이미지 및 설치 파일 준비</h3>
-                            <ol>
+                            <h3>필수 파일 다운로드</h3>
+                            <p class="tab-desc">아래의 버튼을 클릭하여 제가 직접 세팅하고 검증한 핵심 파일들을 즉시 다운로드하세요!</p>
+                            
+                            <!-- Direct Sideload Download Cards -->
+                            <div class="download-container">
+                                <!-- 💡 25MB 업로드 한계 우회를 위해 깃허브 릴리즈 다운로드 링크로 최종 변경 -->
+                                <a href="https://github.com/sichea/kbank-chicken-yamiyami/releases/latest/download/Autox.apk" class="download-card">
+                                    <div class="dl-icon"><i class="fas fa-file-archive"></i></div>
+                                    <div class="dl-info">
+                                        <span class="dl-title">AutoX.js 우회용 APK 설치 파일</span>
+                                        <span class="dl-meta">Autox.apk (Knox 차단 해제 검증됨)</span>
+                                    </div>
+                                    <div class="dl-arrow"><i class="fas fa-download"></i></div>
+                                </a>
+                                <a href="chicken.jpg" download class="download-card">
+                                    <div class="dl-icon"><i class="fas fa-image"></i></div>
+                                    <div class="dl-info">
+                                        <span class="dl-title">진짜 닭 이미지 (타겟용)</span>
+                                        <span class="dl-meta">chicken.jpg (정밀 크롭 완료)</span>
+                                    </div>
+                                    <div class="dl-arrow"><i class="fas fa-download"></i></div>
+                                </a>
+                            </div>
+
+                            <ol style="margin-top: 32px;">
                                 <li>
-                                    <strong>AutoX.js APK 다운로드</strong>
-                                    <p>PC 브라우저로 <a href="https://github.com/kkevsekk1/AutoX/releases" target="_blank" class="link-styled">AutoX.js 공식 릴리즈</a>에 접속하여 <code>app-v6-universal-release.apk</code> 파일을 다운로드합니다.</p>
-                                </li>
-                                <li>
-                                    <strong>타겟 진짜 닭 이미지 저장</strong>
-                                    <p>실제 플레이 도중 진짜 닭의 머리 부분을 타이트하게 잘라 <code>chicken.jpg</code>로 이름 변경 후 스마트폰의 <strong>Download</strong> 폴더로 이동시킵니다.</p>
+                                    <strong>다운로드 받은 파일 관리</strong>
+                                    <p>APK 파일은 PC에서 다운받아 WebADB 설치에 사용하고, 닭 이미지(<code>chicken.jpg</code>)는 스마트폰의 <strong>내장 메모리 > Download</strong> 폴더로 복사해 줍니다.</p>
                                 </li>
                             </ol>
+                            
                             <div class="tip-box">
                                 <i class="fas fa-info-circle"></i>
-                                <span>닭 이미지를 자를 때 꼬리나 몸통 밑부분은 버리고 <strong>벼슬과 얼굴 위주</strong>로 작고 정밀하게 잘라야 가짜 닭 오작동을 막습니다.</span>
+                                <span>닭 이미지의 최종 스마트폰 경로는 <code>/sdcard/Download/chicken.jpg</code> 가 되어야 코드가 정확히 인식합니다.</span>
                             </div>
                         </div>
                     </div>
@@ -146,7 +166,7 @@
                                 </li>
                                 <li>
                                     <strong>APK 강제 주입</strong>
-                                    <p><strong>[Add Device]</strong>를 눌러 폰을 선택하여 연결한 뒤, <code>Choose File</code> 버튼으로 PC에 받아둔 <code>app-v6-universal-release.apk</code> 파일을 선택하고 <strong>[Install]</strong>을 누르면 폰 백신의 차단을 뚫고 강제 설치가 완료됩니다!</p>
+                                    <p><strong>[Add Device]</strong>를 눌러 폰을 선택하여 연결한 뒤, <code>Choose File</code> 버튼으로 방금 다운받은 <code>Autox.apk</code> 파일을 선택하고 <strong>[Install]</strong>을 누르면 폰 백신의 차단을 뚫고 강제 설치가 완료됩니다!</p>
                                 </li>
                             </ol>
                         </div>

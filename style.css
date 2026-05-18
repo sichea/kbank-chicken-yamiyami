@@ -63,7 +63,7 @@ body {
 }
 
 .glow-2 {
-    bottom: 10% ;
+    bottom: 10%;
     right: -100px;
     background: var(--accent-purple);
     animation-delay: 2s;
@@ -349,6 +349,88 @@ header .logo .text {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-desc {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+/* Download Container & Cards Styling */
+.download-container {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.download-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1 1 300px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(6, 182, 212, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(6, 182, 212, 0.15);
+}
+
+.dl-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.download-card:hover .dl-icon {
+    background: var(--gradient-primary);
+    color: #fff;
+}
+
+.dl-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.dl-title {
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.dl-meta {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.dl-arrow {
+    color: var(--text-muted);
+    font-size: 16px;
+    transition: var(--transition-smooth);
+}
+
+.download-card:hover .dl-arrow {
+    color: var(--accent-cyan);
+    transform: translateY(2px);
 }
 
 .info-layout h3 {
