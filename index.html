@@ -150,15 +150,76 @@
                                     <strong>3대 권한 켜기</strong>
                                     <p>AutoX.js 실행 후 안내에 따라 <strong>접근성 권한, 다른 앱 위에 표시 권한(플로팅 창), 화면 캡처 권한</strong>을 모두 켭니다.</p>
                                 </li>
-                                <li>
-                                    <strong>스크립트 작성 및 시작</strong>
-                                    <p>우측 하단 [+] ➡️ [파일]을 눌러 <code>치킨</code> 스크립트를 생성하고, 편집 아이콘을 눌러 아래의 코드를 붙여넣고 저장합니다. 케이뱅크 게임 화면에서 플로팅 창의 <strong>[▶ 재생]</strong> 버튼을 누르면 시작됩니다!</p>
+                                <li style="margin-top: 24px;">
+                                    <strong>스크립트 작성 및 시작 과정</strong>
+                                    
+                                    <!-- Visual Step-by-Step Grid (Images from User) -->
+                                    <div class="steps-grid">
+                                        <div class="step-item">
+                                            <span class="step-num">1</span>
+                                            <img src="step1.jpg" alt="새 파일 생성" class="step-img">
+                                            <span class="step-desc">우측 하단 [+] ➡️ [문서] 클릭</span>
+                                        </div>
+                                        <div class="step-item">
+                                            <span class="step-num">2</span>
+                                            <img src="step2.jpg" alt="파일명 입력" class="step-img">
+                                            <span class="step-desc">파일명 '치킨' 입력 후 [확인]</span>
+                                        </div>
+                                        <div class="step-item">
+                                            <span class="step-num">3</span>
+                                            <img src="step3.jpg" alt="코드 붙여넣기 및 저장" class="step-img">
+                                            <span class="step-desc">코드 붙여넣기 후 우측 상단 [저장]</span>
+                                        </div>
+                                        <div class="step-item">
+                                            <span class="step-num">4</span>
+                                            <img src="step4.jpg" alt="실행 및 권한 승인" class="step-img">
+                                            <span class="step-desc">[▶ 재생] 클릭 후 캡처 권한 승인</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="margin-top: 32px;">
+                                    <strong>게임 접속 및 가동</strong>
+                                    <p>매크로 시작을 완료하신 후, **케이뱅크 닭 찾기 게임에 접속하여 [게임시작!]**을 눌러주면 초광속 매크로가 게임 화면을 실시간으로 감지하기 시작합니다!</p>
+                                </li>
+                                <li style="margin-top: 32px;">
+                                    <strong>매크로 정지하는 방법 (플로팅 창 제어)</strong>
+                                    <p class="tab-desc">플레이 도중 언제든지 매크로 가동을 편리하게 멈추고 제어할 수 있는 방법입니다.</p>
+                                    
+                                    <!-- Stop Guide Container with User Uploaded Image -->
+                                    <div class="stop-container">
+                                        <div class="stop-image-box">
+                                            <img src="stop_guide.jpg" alt="정지 방법 설정 화면" class="stop-img">
+                                        </div>
+                                        <div class="stop-info-box">
+                                            <div class="stop-method">
+                                                <strong>플로팅 창 제어 4단계 순서</strong>
+                                                <ul class="stop-steps-list">
+                                                    <li>
+                                                        <span class="badge-red">1</span>
+                                                        <strong>메뉴 열기</strong>
+                                                        <p>AutoX.js 앱 좌측 상단의 <strong>메뉴(☰)</strong> 아이콘을 탭합니다.</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="badge-red">2</span>
+                                                        <strong>플로팅 창 활성화</strong>
+                                                        <p>메뉴 항목 중에서 <strong>[플로팅 창]</strong> 스위치를 켜 줍니다.</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="badge-red">3</span>
+                                                        <strong>플로팅 위젯 클릭</strong>
+                                                        <p>화면 좌측에 생성된 연두색 <strong>안드로이드 플로팅 아이콘</strong>을 탭합니다.</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="badge-red">4</span>
+                                                        <strong>매크로 가동 종료</strong>
+                                                        <p>확장 메뉴 버튼들 중 노란색 <strong>중지/정지</strong> 아이콘을 터치하면 가동이 즉시 정지됩니다.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ol>
-                            <div class="danger-box">
-                                <i class="fas fa-exclamation-triangle"></i>
-                                <span><strong>비상 정지(킬스위치):</strong> 매크로 실행 중 긴급하게 멈추고 싶을 때는 스마트폰 옆면의 **볼륨 버튼(위 또는 아래)**을 누르면 광속으로 매크로가 즉시 강제 중지됩니다!</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -185,7 +246,7 @@ if (!requestScreenCapture()) {
 // 💡 다운로드 폴더의 닭 이미지 파일 경로
 var targetImgPath = "/sdcard/Download/chicken.jpg"; 
 
-// 💡 10단계용 극단적 임계값 설정
+// 💡 10단계용 정밀 매칭 임계값 설정 (0.90 추천)
 var matchThreshold = 0.90; 
 
 // 💡 클릭 후 대기 시간 극단적 최소화 (50ms)
