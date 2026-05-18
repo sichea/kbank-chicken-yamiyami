@@ -9,15 +9,16 @@
     --text-primary: #f3f4f6;
     --text-secondary: #9ca3af;
     --text-muted: #6b7280;
-    
+
     /* Elegant Gradients */
     --accent-blue: #3b82f6;
     --accent-cyan: #06b6d4;
     --accent-purple: #8b5cf6;
+    --accent-warning: #f59e0b;
     --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
     --gradient-cyan-blue: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
     --glow-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    
+
     /* Layout & Styling Utilities */
     --font-heading: 'Outfit', 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -70,8 +71,13 @@ body {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1) translate(0, 0); }
-    100% { transform: scale(1.15) translate(50px, 30px); }
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    100% {
+        transform: scale(1.15) translate(50px, 30px);
+    }
 }
 
 /* Header Styling */
@@ -136,6 +142,13 @@ header .logo .text {
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+}
+
+.hero .badge.badge-warning {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: var(--accent-warning);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.1);
 }
 
 .hero h1 {
@@ -255,8 +268,15 @@ header .logo .text {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .tab-desc {
@@ -473,7 +493,8 @@ header .logo .text {
 }
 
 .stop-steps-list li::before {
-    display: none !important; /* Disables default round numbers for stop guide sublist */
+    display: none !important;
+    /* Disables default round numbers for stop guide sublist */
 }
 
 .stop-steps-list li .badge-red {
@@ -585,6 +606,24 @@ header .logo .text {
     margin-top: 2px;
 }
 
+.warning-box {
+    margin-top: 32px;
+    padding: 18px 24px;
+    border-radius: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 14px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    color: var(--accent-warning);
+}
+
+.warning-box i {
+    font-size: 18px;
+    margin-top: 2px;
+}
+
 /* Code Section Styling */
 .code-section {
     background: #060913;
@@ -659,13 +698,13 @@ footer .warning-text {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
-    
+
     .stop-container {
         flex-direction: column;
         align-items: stretch;
         padding: 24px;
     }
-    
+
     .stop-image-box {
         margin: 0 auto;
     }
@@ -675,28 +714,28 @@ footer .warning-text {
     header {
         padding: 16px 24px;
     }
-    
+
     .hero h1 {
         font-size: 38px;
     }
-    
+
     .hero-desc {
         font-size: 15px;
     }
-    
+
     .guide-section {
         padding: 24px;
     }
-    
+
     .section-title {
         font-size: 26px;
     }
-    
+
     .tab-btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .code-section {
         padding: 20px;
     }
